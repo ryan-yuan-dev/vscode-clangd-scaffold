@@ -23,7 +23,8 @@
 ├── .clangd               # clangd 配置文件
 ├── .clang-format         # 代码格式化配置
 ├── .gitattributes        # Git 换行符配置
-├── .sub-projects        # 子项目
+├── scripts               # 脚本
+├── .sub-projects         # 子项目
 ├── include/              # 头文件目录
 │   └── clangd-demo/      # 项目头文件命名空间目录
 ├── src/                  # 源代码目录
@@ -44,7 +45,8 @@
   - ANDROID_NDK_HOME     ：设置 Android NDK 路径，/xx/xx/Android/sdk/ndk/27.0.12077973
   - /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin 加入到 PATH，
     让 clangd 自动找到 `clang-format`
-
+  > D98A5BFD4E13BDD9D1C265C3104C045A9AFD5E07 "Apple Development: Peter Koprivc (V57D759G59)"
+  
 ## 使用
 
   1. clone 本项目本地
