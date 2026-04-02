@@ -1,0 +1,1 @@
+codesign -s "$1" --force --deep $2
