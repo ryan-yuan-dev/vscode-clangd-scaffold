@@ -19,7 +19,27 @@
                 "CMAKE_CXX_COMPILER": "/usr/bin/clang++",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
                 "CMAKE_VERBOSE_MAKEFILE": true,
-                "MACOS": true
+                "MACOS": "ON"
+            }
+        },
+        {
+            "name": "iOS",
+            "displayName": "iOS",
+            "description": "macOS 上编译 iOS 项目",
+            "generator": "Xcode",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "PLATFORM": "OS64",
+                "CMAKE_SYSTEM_NAME": "iOS",
+                "CMAKE_SYSTEM_VERSION": "13.0",
+                "CMAKE_OSX_ARCHITECTURES": "arm64",
+                "CMAKE_OSX_SYSROOT": "iphoneos",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "CMAKE_VERBOSE_MAKEFILE": true,
+                "CMAKE_TOOLCHAIN_FILE": "${workspaceFolder}/ios-cmake/ios.toolchain.cmake",
+                "IOS": "ON"
             }
         },
         {
