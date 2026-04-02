@@ -39,6 +39,9 @@
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
                 "CMAKE_VERBOSE_MAKEFILE": true,
                 "CMAKE_TOOLCHAIN_FILE": "${workspaceFolder}/ios-cmake/ios.toolchain.cmake",
+                "CMAKE_XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY": "$env{XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY}",
+                "CMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM": "$env{IOS_DEVELOPMENT_TEAM}",
+                "CMAKE_XCODE_ATTRIBUTE_CODE_SIGN_STYLE": "Automatic",
                 "IOS": "ON"
             }
         },

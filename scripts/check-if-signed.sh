@@ -1,0 +1,1 @@
+codesign -vv -d "$1"

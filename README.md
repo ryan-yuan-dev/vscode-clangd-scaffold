@@ -23,7 +23,8 @@
 ├── .clangd               # clangd 配置文件
 ├── .clang-format         # 代码格式化配置
 ├── .gitattributes        # Git 换行符配置
-├── .sub-projects        # 子项目
+├── scripts               # 脚本
+├── .sub-projects         # 子项目
 ├── include/              # 头文件目录
 │   └── clangd-demo/      # 项目头文件命名空间目录
 ├── src/                  # 源代码目录
@@ -41,9 +42,13 @@
   
 - 系统环境变量
   - IOS_DEVELOPMENT_TEAM ：设置 iOS 开发团队
+  - XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY ：设置 iOS 签名
   - ANDROID_NDK_HOME     ：设置 Android NDK 路径，/xx/xx/Android/sdk/ndk/27.0.12077973
   - /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin 加入到 PATH，
     让 clangd 自动找到 `clang-format`
+
+  > D98A5BFD4E13xxxxxC265C3104C045A9AFD5E07 "Apple Development: xxx (V57D7xxG59)"
+  > `V57D7xxG59` 为 IOS_DEVELOPMENT_TEAM 的值；`Apple Development: xxx (V57D759G59)` 为 XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY 的值
 
 ## 使用
 
