@@ -22,6 +22,7 @@ elseif(IOS)
     message(STATUS "Detected iOS Platform, syncing .clangd...")
     # 读取 IOS_DEVELOPMENT_TEAM 环境变量
     if(DEFINED ENV{IOS_DEVELOPMENT_TEAM})
+<<<<<<< HEAD
         # set(CMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM $ENV{IOS_DEVELOPMENT_TEAM})
         # set(CMAKE_XCODE_ATTRIBUTE_CODE_SIGN_STYLE "Automatic")
         # set(CMAKE_XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY "$ENV{XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY}")
@@ -38,6 +39,14 @@ elseif(IOS)
         MACOSX_BUNDLE_BUNDLE_VERSION "1.0.0"            # Build 版本号
         MACOSX_BUNDLE_SHORT_VERSION_STRING "1.0"        # 营销版本号 (Version)
     )
+=======
+        set(CMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM $ENV{IOS_DEVELOPMENT_TEAM})
+        message(STATUS "IOS_DEVELOPMENT_TEAM: $ENV{IOS_DEVELOPMENT_TEAM}")
+    else()
+        message(ERROR "IOS_DEVELOPMENT_TEAM environment variable is not set. ")
+        execute_process(COMMAND sh "${CMAKE_SOURCE_DIR}/scripts/list-ios-development-teams.sh")
+    endif()
+>>>>>>> origin/dev
 endif()
 
 add_subdirectory(sub-projects/a-lib-demo)

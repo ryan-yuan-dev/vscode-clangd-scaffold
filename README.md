@@ -42,11 +42,14 @@
   
 - 系统环境变量
   - IOS_DEVELOPMENT_TEAM ：设置 iOS 开发团队
+  - XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY ：设置 iOS 签名
   - ANDROID_NDK_HOME     ：设置 Android NDK 路径，/xx/xx/Android/sdk/ndk/27.0.12077973
   - /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin 加入到 PATH，
     让 clangd 自动找到 `clang-format`
-  > D98A5BFD4E13BDD9D1C265C3104C045A9AFD5E07 "Apple Development: Peter Koprivc (V57D759G59)"
-  
+
+  > D98A5BFD4E13xxxxxC265C3104C045A9AFD5E07 "Apple Development: xxx (V57D7xxG59)"
+  > `V57D7xxG59` 为 IOS_DEVELOPMENT_TEAM 的值；`Apple Development: xxx (V57D759G59)` 为 XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY 的值
+
 ## 使用
 
   1. clone 本项目本地
