@@ -1,0 +1,37 @@
+# 自动处理换行符，确保跨平台一致性
+# 提交时转换为 LF，检出时根据平台决定
+* text=auto
+
+# 源代码文件
+*.cpp text
+*.h text
+*.hpp text
+*.c text
+*.cc text
+*.cxx text
+
+# 构建配置文件
+*.cmake text
+CMakeLists.txt text
+
+# JSON 配置文件
+*.json text
+
+# 其他文本文件
+*.md text
+*.txt text
+
+# 二进制文件（不参与换行符转换）
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.tar binary
+*.gz binary
+*.exe binary
+*.dll binary
+*.so binary
+*.dylib binary

@@ -1,0 +1,11 @@
+CompileFlags:
+  Remove:
+    # 移除 Xcode 的 isystem 路径（两种格式）
+    - -isystem/Applications/Xcode.app*
+    - -isystem"/Applications/Xcode.app*"
+    - -isystem=/Applications/Xcode.app*
+    - -isystem="/Applications/Xcode.app*"
+Completion:
+  AllScopes: Yes
+Index:
+  Background: Build

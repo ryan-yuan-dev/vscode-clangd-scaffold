@@ -1,0 +1,26 @@
+{
+    "workbench.colorTheme": "Light 2026",
+    "chat.mcp.access": "none",
+    "chat.mcp.apps.enabled": false,
+    "chat.mcp.autostart": "never",
+    "clangd.arguments": [
+        "--compile-commands-dir=${workspaceFolder}",
+        "--background-index",
+        "--completion-style=detailed",
+        "-j=4",
+    ],
+    "cmake.useCMakePresets": "always",
+    "cmake.cmakePath": "cmake",
+    "[cpp][c]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+        "editor.formatOnSave": true
+    },
+    "[json][jsonc][jsonl][json5]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.formatOnSave": true
+    }
+}
