@@ -11,11 +11,21 @@ if(ANDROID)
     execute_process(COMMAND ${CMAKE_COMMAND} -E copy 
                     ${CMAKE_SOURCE_DIR}/.clangd.android 
                     ${CMAKE_SOURCE_DIR}/.clangd) 
-elseif(APPLE)
+elseif(MACOS)
     execute_process(COMMAND ${CMAKE_COMMAND} -E copy 
                     ${CMAKE_SOURCE_DIR}/.clangd.macos 
                     ${CMAKE_SOURCE_DIR}/.clangd)
     message(STATUS "Detected Apple Platform, syncing .clangd...")
+elseif(IOS) 
+    message(STATUS "Detected iOS Platform, syncing .clangd...")
+    # 读取 IOS_DEVELOPMENT_TEAM 环境变量
+    if(DEFINED ENV{IOS_DEVELOPMENT_TEAM})
+        set(CMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM $ENV{IOS_DEVELOPMENT_TEAM})
+        message(STATUS "IOS_DEVELOPMENT_TEAM: $ENV{IOS_DEVELOPMENT_TEAM}")
+    else()
+        message(ERROR "IOS_DEVELOPMENT_TEAM environment variable is not set. ")
+        execute_process(COMMAND sh "${CMAKE_SOURCE_DIR}/scripts/list-ios-development-teams.sh")
+    endif()
 endif()
 
 add_executable(clangd-demo main.cpp)
